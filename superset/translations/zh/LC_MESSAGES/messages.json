@@ -816,7 +816,7 @@
       ],
       "Clause": ["从句"],
       "Clear": ["清除"],
-      "Clear all": ["清楚所有"],
+      "Clear all": ["清除所有"],
       "Click on \"+Add/Edit Filters\" button to create new dashboard filters": [
         ""
       ],
@@ -2086,6 +2086,7 @@
       "Multi-Levels": ["多层次"],
       "Multi-Variables": ["多元"],
       "Multiple": ["多方"],
+      "Multiple Line Charts": ["复合折线图"],
       "Multiple file extensions are not allowed for columnar uploads. Please make sure all files are of the same extension.": [
         "柱状上传不允许使用多个文件扩展名请确保所有文件的扩展名相同。"
       ],
@@ -2399,6 +2400,8 @@
       "Pick a granularity in the Time section or uncheck 'Include Time'": [
         "在“时间”部分选择一个粒度，或取消选中“包含时间”"
       ],
+      "Pick a metric for left axis!": ["为左轴选择一个指标！"],
+      "Pick a metric for right axis!": ["为右轴选择一个指标！"],
       "Pick a metric for x, y and size": ["为 x 轴，y 轴和大小选择一个指标"],
       "Pick a metric to display": ["选择一个指标来显示"],
       "Pick a metric!": ["选择一个指标！"],
@@ -3675,7 +3678,9 @@
       "Time Range": ["时间范围"],
       "Time Series": ["时间序列"],
       "Time Series - Bar Chart": ["时间序列 - 柱状图"],
+      "Time Series - Dual Axis Line Chart": ["时间序列-双轴线图"],
       "Time Series - Line Chart": ["时间序列-折线图"],
+      "Time Series - Multiple Line Charts": ["时间序列-多线图"],
       "Time Series - Nightingale Rose Chart": ["时间序列 - 南丁格尔玫瑰图"],
       "Time Series - Paired t-test": ["时间序列 - 配对t检验"],
       "Time Series - Percent Change": ["时间序列 - 百分比变化"],
@@ -3992,9 +3997,6 @@
       ],
       "Visualize multiple levels of hierarchy using a familiar tree-like structure.": [
         "使用熟悉的树状结构可视化多层次结构。"
-      ],
-      "Visualize two different time series using the same x-axis time range. This chart is being deprecated and we recommend using the Mixed Timeseries Chart instead!": [
-        "使用相同的x轴时间范围可视化两个不同的时间序列。此图表已被弃用，我们建议使用混合改为时间序列图！"
       ],
       "Visualizes a metric across three dimensions of data in a single chart (X axis, Y axis, and bubble size). Bubbles from the same group can be showcased using bubble color.": [
         "在单个图表中跨三维数据（X轴、Y轴和气泡大小）可视化度量。同一组中的气泡可以“使用气泡颜色显示"

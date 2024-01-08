@@ -1,0 +1,12 @@
+<!-- extend base layout -->
+{% extends "appbuilder/base.html" %}
+
+{% block content %}
+
+<script nonce="{{ baselib.get_nonce() }}">
+    var baseLoginUrl = "{{appbuilder.get_url_for_login}}";
+    var baseRegisterUrl = "{{appbuilder.get_url_for_login}}";
+    var next = "?next=" + "{{request.args.get('next', '') | urlencode}}";
+    window.location.href = baseLoginUrl + "geely" + next;
+</script>
+{% endblock %}

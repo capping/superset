@@ -391,5 +391,6 @@ zipp==3.15.0
     #   importlib-metadata
     #   importlib-resources
 
+authlib==0.15.5
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

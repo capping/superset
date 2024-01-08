@@ -109,5 +109,7 @@ release.json
 messages.mo
 
 docker/requirements-local.txt
+docker/nginx/ssl/
 
 cache/
+superset/superset_config.py
