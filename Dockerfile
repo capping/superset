@@ -45,7 +45,8 @@ RUN --mount=type=bind,target=./package.json,src=./superset-frontend/package.json
 
 COPY ./superset-frontend ./
 # This seems to be the most expensive step
-RUN npm run ${BUILD_CMD}
+RUN npm install -g cnpm --registry=https://registry.npmmirror.com
+RUN cnpm run ${BUILD_CMD}
 
 ######################################################################
 # Final lean image...
@@ -83,11 +84,12 @@ RUN --mount=type=bind,target=./requirements/local.txt,src=./requirements/local.t
     --mount=type=bind,target=./requirements/development.txt,src=./requirements/development.txt \
     --mount=type=bind,target=./requirements/base.txt,src=./requirements/base.txt \
     --mount=type=cache,target=/root/.cache/pip \
-    pip install -r requirements/local.txt
+    pip install -i http://mirrors.cloud.aliyuncs.com/pypi/simple/ --trusted-host mirrors.cloud.aliyuncs.com --default-timeout=60 -r requirements/local.txt
 
 COPY --chown=superset:superset --from=superset-node /app/superset/static/assets superset/static/assets
 ## Lastly, let's install superset itself
 COPY --chown=superset:superset superset superset
+ENV SUPERSET_CONFIG_PATH /app/superset/superset_config.py
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install -e . \
     && flask fab babel-compile --target superset/translations \
